@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Josefin+Sans:300,400|Ubuntu+Mono');
+
+$monospace: 'Ubuntu Mono', monospace;
+$sans-serif: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+$serif: 'Gentium Book Basic', 'Times New Roman', serif;
+
+$dark: #222;
+$light: #fff;
+$inverse-dark: darken($light, 10%);
+$inverse-light: $dark;
+$link-regular: #108;
+$link-visited: darken($link-regular, 25%);
+$inverse-link-regular: lighten($link-regular, 60%);
+$inverse-link-visited: darken($inverse-link-regular, 10%);
+$border: lighten($dark, 25%);
+$inverse-border: darken($light, 25%);
+
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+%callout {
+    background-color: darken($light, 5%);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+%callout-inverse {
+    background-color: lighten($dark, 5%);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+%clearfix {
+    &:after, &:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

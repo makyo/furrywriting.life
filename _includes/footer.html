@@ -1,0 +1,17 @@
+<footer>
+    <div class="wrapper flex">
+        <div class="half">
+            <h1><a href="http://furrywriting.life">Furry Writing Life</a></h1>
+            <p>Furry Writing Life is a site for projects undertaken by members of the Furry Writers' Guild and other furry writers out there on the internet.</p>
+        </div>
+        {% if site.title != 'Furry Writing Life' %}
+        <div class="half">
+            <h2>{{ site.title }}</h2>
+            <p>{{ site.description }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="wrapper">
+        <p style="text-align: center">All content &copy; its author; additiona licenses may apply</p>
+    </div>
+</footer>

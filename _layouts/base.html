@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {% if page.title %}<h2 class="subtitle">{{ page.title }}</h2>{% endif %}
+            {{ content }}
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script type="text/javascript">
+    function invert() {
+        var nav = document.getElementsByTagName('nav')[0];
+        if (document.body.classList.contains('inverse')) {
+            document.body.classList.remove('inverse');
+            document.cookie = "inverse=false;path=/";
+        } else {
+            document.body.classList.add('inverse');
+            document.cookie = "inverse=true;path=/";
+        }
+    }
+    if (document.cookie.indexOf('inverse=true') >= 0) {
+        invert();
+    }
+    </script>
+
+</body>
+
+</html>
