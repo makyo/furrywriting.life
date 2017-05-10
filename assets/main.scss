@@ -8,6 +8,7 @@ main .flex {
     flex-flow: row-wrap;
     flex-wrap: wrap;
     justify-content: space-around;
+    vertical-align: top;
 
     .project {
         flex-basis: 300px;
